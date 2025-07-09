@@ -47,7 +47,7 @@ export const NavLinks = () => {
 
   return (
     <>
-      <nav className="hidden md:flex space-x-[30px] pr-16 gap-1">
+      <nav className="hidden md:flex space-x-[30px] pr-8 gap-1">
         <NavLink
           to="/advertise"
           className={({ isActive }) => textClasses(isActive)}

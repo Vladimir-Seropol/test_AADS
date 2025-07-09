@@ -6,7 +6,7 @@ import { Footer } from "./features/campaigns/components/layout/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-full max-w-[1440px] bg-[#F8F8F9]">
+      <div className="min-h-full max-w-[1440px] bg-[#F8F8F9] md:pl-4">
         <Header />
         <main className="py-10 px-5  max-w-[1150px] mx-auto">
           <div className="max-w-7xl mx-auto   ">
