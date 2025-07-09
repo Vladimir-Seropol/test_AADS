@@ -42,22 +42,22 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
         </div>
 
         <div className="w-full md:hidden space-y-4">
-          <div className="flex justify-between items-center border-b pb-4">
+          <div className="flex justify-between items-center border-b pb-4 relative">
             <div>
               <p className="text-sm text-gray-500">Impressions/day</p>
-              <p className="text-2xl font-bold">
+              <p className="absolute right-0 top-1 text-2xl font-bold">
                 {formatNumber(totalImpressions)}
                 <span className="text-sm font-medium text-green-500">↑ 1.78%</span>
               </p>
-              <p className="text-xs text-gray-500">8.3M unique IPs</p>
+              <p className=" text-xs text-gray-500">8.3M unique IPs</p>
             </div>
            
           </div>
 
-          <div className="flex justify-between items-center border-b pb-4">
+          <div className="flex justify-between items-center border-b pb-4 relative">
             <div>
               <p className="text-sm text-gray-500">Active ad units</p>
-              <p className="text-2xl font-bold">
+              <p className="absolute right-0 top-1 text-2xl font-bold">
                 {formatNumber(activeCampaigns * 1000)}
                  <span className="text-sm font-medium text-red-500">↓ 1.78%</span>
               </p>
@@ -66,10 +66,10 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
            
           </div>
 
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center relative">
             <div>
               <p className="text-sm text-gray-500">Publishers earn/month</p>
-              <p className="text-2xl font-bold">
+              <p className="text-2xl font-bold absolute right-0 top-1">
                 ${Math.floor(totalSpending / 1000)}K
                  <span className="text-sm font-medium text-green-500">↑ 3.17%</span>
               </p>
