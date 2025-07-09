@@ -15,47 +15,47 @@ export const CampaignTableRow = ({
 }: CampaignTableRowProps) => {
   return (
     <tr key={campaign.id} className="hover:bg-gray-50">
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className=" py-3 whitespace-wrap max-w-[236px] ">
         <Tooltip content={campaign.name}>
-          <span className="text-sm font-semibold text-primary">
+          <span className="text-sm font-semibold text-primary pl-6">
             {campaign.name}
           </span>
         </Tooltip>
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className=" py-3 whitespace-wrap max-w-[236px]">
         <StatusBadge status={campaign.status} />
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+      <td className=" py-3 whitespace-wrap max-w-[236px] text-sm text-[#263238]">
         <PaymentModel model={campaign.paymentModel} />
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+      <td className=" py-3 whitespace-wrap max-w-[236px] text-sm text-[#263238]">
         <Tooltip content={`Общие расходы: $${campaign.spending}`}>
           <span>$ {campaign.spending}</span>
         </Tooltip>
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+      <td className=" py-3 whitespace-wrap max-w-[236px] text-sm text-[#263238]">
         <Tooltip content={`Показы: ${campaign.impressions.toLocaleString()}`}>
           <span>{campaign.impressions.toLocaleString()}</span>
         </Tooltip>
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+      <td className=" py-3 whitespace-wrap max-w-[236px] text-sm text-[#263238]">
         <Tooltip content={`Клики: ${campaign.clicks.toLocaleString()}`}>
           <span>{campaign.clicks.toLocaleString()}</span>
         </Tooltip>
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+      <td className=" py-3 whitespace-wrap max-w-[236px] text-sm text-[#263238]">
         <Tooltip content={`CTR: ${campaign.ctr}%`}>
           <span>{campaign.ctr}%</span>
         </Tooltip>
       </td>
 
-      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+      <td className=" py-3 whitespace-wrap max-w-[236px] text-sm font-medium">
         <Tooltip content="Удалить кампанию">
           <IconButton
             onClick={() => onDelete(campaign.id)}

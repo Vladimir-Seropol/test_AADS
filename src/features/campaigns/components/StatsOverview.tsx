@@ -29,13 +29,13 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
   };
 
   return (
-    <div className=" rounded-lg mb-6 p-6">
-      <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-        <div className="flex-1">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+    <div className=" rounded-lg mb-16 pt-5">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-24">
+        <div className="flex-1 max-w-md">
+         <h1 className="font-poppins font-bold text-[28px] leading-[40px] md:text-[36px] md:leading-[44px] tracking-normal text-[#263238] mb-4">
             The first crypto & bitcoin advertising network in the market
           </h1>
-          <p className="text-gray-600">
+         <p className="font-inter font-normal text-base leading-6 tracking-normal text-[#263238] font-[600]">
             Skyrocket your publisher earnings with our game-changing traffic
             monetization solution
           </p>
@@ -47,10 +47,11 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
               <p className="text-sm text-gray-500">Impressions/day</p>
               <p className="text-2xl font-bold">
                 {formatNumber(totalImpressions)}
+                <span className="text-sm font-medium text-green-500">↑ 1.78%</span>
               </p>
               <p className="text-xs text-gray-500">8.3M unique IPs</p>
             </div>
-            <span className="text-sm font-medium text-green-500">↑ 1.78%</span>
+           
           </div>
 
           <div className="flex justify-between items-center border-b pb-4">
@@ -58,10 +59,11 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
               <p className="text-sm text-gray-500">Active ad units</p>
               <p className="text-2xl font-bold">
                 {formatNumber(activeCampaigns * 1000)}
+                 <span className="text-sm font-medium text-red-500">↓ 1.78%</span>
               </p>
               <p className="text-xs text-gray-500">over 6K publishers</p>
             </div>
-            <span className="text-sm font-medium text-red-500">↓ 1.78%</span>
+           
           </div>
 
           <div className="flex justify-between items-center">
@@ -69,12 +71,13 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
               <p className="text-sm text-gray-500">Publishers earn/month</p>
               <p className="text-2xl font-bold">
                 ${Math.floor(totalSpending / 1000)}K
+                 <span className="text-sm font-medium text-green-500">↑ 3.17%</span>
               </p>
               <p className="text-xs text-gray-500">
                 from {campaigns.length} ad campaigns
               </p>
             </div>
-            <span className="text-sm font-medium text-green-500">↑ 3.17%</span>
+           
           </div>
         </div>
 
@@ -85,12 +88,13 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
                 <h3 className="text-sm font-medium text-gray-500">
                   Impressions/day
                 </h3>
-                <span className="text-sm font-medium text-green-500">
-                  ↑ 1.78%
-                </span>
+               
               </div>
               <p className="text-2xl font-bold mt-1">
                 {formatNumber(totalImpressions)}
+                <span className="text-sm font-medium text-green-500 pl-1">
+                  ↑ 1.78%
+                </span>
               </p>
               <p className="text-sm text-gray-500 mt-1">
                 {campaigns.length} active campaigns
@@ -102,11 +106,13 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
                 <h3 className="text-sm font-medium text-gray-500">
                   Active ad units
                 </h3>
+                
+              </div>
+              <p className="text-2xl font-bold mt-1">{activeCampaigns}
                 <span className="text-sm font-medium text-red-500">
                   ↓ 1.78%
                 </span>
-              </div>
-              <p className="text-2xl font-bold mt-1">{activeCampaigns}</p>
+              </p>
               <p className="text-sm text-gray-500 mt-1">
                 over {campaigns.length} publishers
               </p>
@@ -117,12 +123,13 @@ export const StatsOverview = ({ campaigns }: StatsOverviewProps) => {
                 <h3 className="text-sm font-medium text-gray-500">
                   Publishers earn/month
                 </h3>
-                <span className="text-sm font-medium text-green-500">
-                  ↑ 3.17%
-                </span>
+               
               </div>
               <p className="text-2xl font-bold mt-1">
                 ${totalSpending.toFixed(2)}
+                 <span className="text-sm font-medium text-green-500">
+                  ↑ 3.17%
+                </span>
               </p>
               <p className="text-sm text-gray-500 mt-1">
                 from {campaigns.length} ad campaigns

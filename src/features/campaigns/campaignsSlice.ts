@@ -1,4 +1,3 @@
-// src/features/campaigns/campaignsSlice.ts
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { nanoid } from "nanoid";
 import type { Campaign } from "./types/campaign";

@@ -52,8 +52,8 @@ export const CampaignTable = () => {
   return (
     <>
       <StatsOverview campaigns={campaigns} />
-      <div className="noto-sans bg-white rounded-lg shadow-sm overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+      <div className="noto-sans  rounded-lg shadow-sm overflow-hidden">
+        <div className=" flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10 mb-7">
           <h2 className="text-xl font-semibold text-gray-800">Campaigns</h2>
           <Button
             onClick={() => setIsModalOpen(true)}
@@ -65,7 +65,7 @@ export const CampaignTable = () => {
         </div>
 
         {/* Мобильная версия */}
-        <div className="md:hidden space-y-2 p-4">
+        <div className="md:hidden space-y-2 p-4 bg-white">
           {sortedCampaigns.map((campaign) => (
             <CampaignCard
               key={campaign.id}
@@ -80,7 +80,7 @@ export const CampaignTable = () => {
         </div>
 
         {/* Десктопная версия */}
-        <div className="hidden md:block overflow-x-auto">
+        <div className="border hidden md:block overflow-x-auto bg-white">
           <table className="min-w-full divide-y divide-gray-200">
             <CampaignTableHeader
               columns={columns}
